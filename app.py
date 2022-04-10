@@ -28,7 +28,7 @@ def predict():
     topological_results = topological_link_prediction(disase_list = predicted_compounds)
     print(f"ml model {predicted_compounds}")
     print(f" topological {topological_results}")
-    return render_template('second.html',colours = selected_diseases)
+    return render_template('second.html',ml_model = predicted_compounds,topo = topological_results)
 
 if __name__=='__main__':
   app.debug=True
