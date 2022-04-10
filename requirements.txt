@@ -1,0 +1,6 @@
+pyTigerGraph
+pandas
+numpy
+torch
+fastapi
+uvicorn[standard]
