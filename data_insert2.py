@@ -60,7 +60,7 @@ for triplet in triplets:
 # print(conn.gsql(f"""use global {schema}"""))
 
 conn.getSchema()
-for i in range(5122391,0,-1):
+for i in range(5090948,0,-1):
     [h,r,t] = triplets[i]
     h_type = h.split("::")[0].replace(" " ,"")
     h_id = str(h.split("::")[1])

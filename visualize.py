@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pyvis.network import Network
 
-net = Network(notebook=True)
+net = Network(notebook=True,height='900px',width='75%',bgcolor="#222222",font_color='white')
 
 
 secret="ji08rpup1652lum47ojvpuei1ievolum"
@@ -61,6 +61,9 @@ def html_saved(disase_list,compound_list):
     df_saved['to_id'] = to_series
     G= nx.from_pandas_edgelist(df_saved,source='from_id',target='to_id')
     net.from_nx(G)
+    net.show_buttons(filter_=['physics'])
     net.show("example.html")
+
+html_saved(disase_list,compound_list)
 
 
