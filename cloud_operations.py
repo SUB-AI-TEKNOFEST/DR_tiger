@@ -42,7 +42,7 @@ def topological_link_prediction(disase_list=disase_list,compound_list=compound_l
         else:
             cleanead_disase_list.append(d)
 
-    compound_list = [item.split('::')[1] for item in dict_compounds.keys()]
+    compound_list = [item.split('::')[1] for item in compound_list.keys()]
     
     link_prediction_scores = {}
     for d in cleanead_disase_list:
