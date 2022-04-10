@@ -1,7 +1,5 @@
 import csv
 
-from urllib3 import Retry
-
 COVID = ['Disease::SARS-CoV2 E',
 'Disease::SARS-CoV2 M',
 'Disease::SARS-CoV2 N',
