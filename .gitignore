@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ourpackage
+data/
 # Distribution / packaging
 .Python
 build/
