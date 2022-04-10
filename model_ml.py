@@ -12,7 +12,7 @@ entity_emb = np.load('data/embed/DRKG_TransE_l2_entity.npy')
 rel_emb = np.load('data/embed/DRKG_TransE_l2_relation.npy')
 
 
-def user_diseases_list(diseases_list,allowed_labels=allowed_labels):
+def get_compound_list(diseases_list,allowed_labels=allowed_labels):
     entity_name_to_id, entity_id_to_name, relation_name_to_id, allowed_relation_ids, allowed_drug_ids,disease_ids = file_operations.entity_relations(allowed_labels,diseases_list)
     allowed_drug_ids = torch.tensor(allowed_drug_ids).long()
     disease_ids = torch.tensor(disease_ids).long()
@@ -50,4 +50,4 @@ def user_diseases_list(diseases_list,allowed_labels=allowed_labels):
         dict[entity_id_to_name[drug]]= score
     return dict
 
-print(user_diseases_list(['Disease::SARS-CoV2 N']))
+print(get_compound_list(['Disease::SARS-CoV2 nsp5']))

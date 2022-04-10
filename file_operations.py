@@ -76,8 +76,3 @@ def open_file_return_list(file_name):
     with open(file_name,'r') as file:
         lines = [item.replace('\n','') for item in file.readlines()]
         return lines
-
-    
-
-
-

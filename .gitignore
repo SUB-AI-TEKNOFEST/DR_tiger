@@ -5,6 +5,7 @@ __pycache__/
 
 # ourpackage
 data/
+
 # Distribution / packaging
 .Python
 build/
