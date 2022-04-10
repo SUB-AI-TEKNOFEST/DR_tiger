@@ -10,7 +10,7 @@ import csv
 with open('diseases_names.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
-
+""" """
 import os
 if os.path.exists("templates/example.html"):
   os.remove("templates/example.html")
