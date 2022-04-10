@@ -1,7 +1,8 @@
 import numpy as np
 
 from flask import Flask, request, render_template
-from model_ml import user_diseases_list
+from model_ml import get_compound_list
+from cloud_operations import topological_link_prediction
 app = Flask(__name__)
 
 import csv
@@ -21,12 +22,14 @@ def index():
 
 @app.route("/predict", methods=['GET', 'POST'])
 def predict():
-    input_data = list(request.form.values())
-    print(f"1 : {[input_data[0][1:len(input_data[0])]]}")
-    result_diseases = user_diseases_list(diseases_list = [input_data[0][2:len(input_data[0])-2]])
-    print(f"5 {result_diseases}")
-    return render_template('second.html',colours = result_diseases)
+    selected_diseases = list(request.form.values())
+    print(f"selected : {selected_diseases}")
+    predicted_compounds = get_compound_list(diseases_list = [selected_diseases[0][2:len(selected_diseases[0])-2]])
+    topological_results = topological_link_prediction(disase_list = predicted_compounds)
+    print(f"ml model {predicted_compounds}")
+    print(f" topological {topological_results}")
+    return render_template('second.html',colours = selected_diseases)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__=='__main__':
+  app.debug=True
+  app.run('0.0.0.0', port=5005)
