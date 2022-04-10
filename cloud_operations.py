@@ -1,3 +1,4 @@
+from pkg_resources import DEVELOP_DIST
 import pyTigerGraph as tg
 import pandas as pd
 import file_operations
@@ -28,21 +29,21 @@ conn = tg.TigerGraphConnection(host=host,graphname=graphname,username=username,p
 dict_compounds= {'Compound::DB00755': -0.0041017914, 'Compound::DB11094': -0.004272136, 'Compound::DB09341': -0.004339902, 'Compound::DB04868': -0.004389381, 'Compound::DB00815': -0.004389473, 'Compound::DB01222': -0.004392515, 'Compound::DB12291': -0.004671714, 'Compound::DB14681': -0.0046740165, 'Compound::DB00091': -0.0050580334, 'Compound::DB00635': -0.005157881}
 
 disase_list = ['Disease::SARS-CoV2 nsp5']
-compound_list = [item.split('::')[1] for item in dict_compounds.keys()]
+compound_list = dict_compounds
 
-print(compound_list)
-cleanead_disase_list = []
-for d in disase_list:
-    d=d.split('::')[1]
-    try:
-        conn.getVerticesById(vertexType='Disease',vertexIds=d)
-    except:
-        print(f'The {d} not in cloud yet')
-    else:
-        cleanead_disase_list.append(d)
-print(cleanead_disase_list)
+def topological_link_prediction(disase_list=disase_list,compound_list=compound_list):
+    cleanead_disase_list = []
+    for d in disase_list:
+        d=d.split('::')[1]
+        try:
+            conn.getVerticesById(vertexType='Disease',vertexIds=d)
+        except:
+            print(f'The {d} not in cloud yet')
+        else:
+            cleanead_disase_list.append(d)
 
-def topological_link_prediction(cleanead_disase_list=cleanead_disase_list,compound_list=compound_list):
+    compound_list = [item.split('::')[1] for item in dict_compounds.keys()]
+    
     link_prediction_scores = {}
     for d in cleanead_disase_list:
         for c in compound_list:
@@ -58,6 +59,3 @@ def topological_link_prediction(cleanead_disase_list=cleanead_disase_list,compou
     return link_prediction_scores
 
 print(topological_link_prediction())
-
-
---
