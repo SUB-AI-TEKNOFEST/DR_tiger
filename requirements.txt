@@ -5,3 +5,6 @@ torch
 fastapi
 uvicorn[standard]
 flask
+matplotlib
+networkx
+pyvis
