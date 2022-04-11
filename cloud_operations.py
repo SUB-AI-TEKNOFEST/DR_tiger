@@ -1,4 +1,3 @@
-from pkg_resources import DEVELOP_DIST
 import pyTigerGraph as tg
 import pandas as pd
 import file_operations
@@ -9,12 +8,13 @@ graphname="DRKG"
 username="tigergraph" 
 password="utku123"
 
-graph = tg.TigerGraphConnection(host=host, graphname=graphname)
-authToken = graph.getToken(secret=secret)
-authToken = authToken[0]
-
-conn = tg.TigerGraphConnection(host=host,graphname=graphname,username=username,password=password,apiToken=authToken)
-
+try:
+    graph = tg.TigerGraphConnection(host=host, graphname=graphname)
+    authToken = graph.getToken(secret=secret)
+    authToken = authToken[0]
+    conn = tg.TigerGraphConnection(host=host,graphname=graphname,username=username,password=password,apiToken=authToken)
+except Exception as e:
+    print('Tigergraph')
 # for i in range(636018,len(triplets)):
 #     [h,r,t] = triplets[i]
 #     h_type = h.split("::")[0].replace(" " ,"")
@@ -29,9 +29,8 @@ conn = tg.TigerGraphConnection(host=host,graphname=graphname,username=username,p
 dict_compounds= {'Compound::DB00755': -0.0041017914, 'Compound::DB11094': -0.004272136, 'Compound::DB09341': -0.004339902, 'Compound::DB04868': -0.004389381, 'Compound::DB00815': -0.004389473, 'Compound::DB01222': -0.004392515, 'Compound::DB12291': -0.004671714, 'Compound::DB14681': -0.0046740165, 'Compound::DB00091': -0.0050580334, 'Compound::DB00635': -0.005157881}
 
 disase_list = ['Disease::SARS-CoV2 nsp5']
-compound_list = dict_compounds
 
-def topological_link_prediction(disase_list=disase_list,compound_list=compound_list):
+def topological_link_prediction(disase_list,compound_list):
     cleanead_disase_list = []
     for d in disase_list:
         d=d.split('::')[1]
@@ -42,11 +41,11 @@ def topological_link_prediction(disase_list=disase_list,compound_list=compound_l
         else:
             cleanead_disase_list.append(d)
 
-    compound_list = [item.split('::')[1] for item in compound_list.keys()]
+    compound_list_cleanead = [item.split('::')[1] for item in compound_list.keys()]
     
     link_prediction_scores = {}
     for d in cleanead_disase_list:
-        for c in compound_list:
+        for c in compound_list_cleanead:
             tg_adamic_adar=conn.runInstalledQuery("tg_adamic_adar", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
             tg_common_neighbors=conn.runInstalledQuery("tg_common_neighbors", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
             tg_preferential_attachment=conn.runInstalledQuery("tg_preferential_attachment", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
@@ -58,4 +57,3 @@ def topological_link_prediction(disase_list=disase_list,compound_list=compound_l
             link_prediction_scores[f'{d}::{c}'] = scores
     return link_prediction_scores
 
-print(topological_link_prediction())

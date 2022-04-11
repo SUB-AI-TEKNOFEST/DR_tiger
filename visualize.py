@@ -64,6 +64,5 @@ def html_saved(disase_list,compound_list):
     net.show_buttons(filter_=['physics'])
     net.show("templates/visualization.html")
 
-html_saved(disase_list,compound_list)
 
 

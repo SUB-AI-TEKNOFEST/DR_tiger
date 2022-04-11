@@ -50,4 +50,3 @@ def get_compound_list(diseases_list,allowed_labels=allowed_labels):
         dict[entity_id_to_name[drug]]= score
     return dict
 
-print(get_compound_list(['Disease::SARS-CoV2 nsp5']))

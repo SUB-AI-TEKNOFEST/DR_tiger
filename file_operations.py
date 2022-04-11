@@ -43,8 +43,7 @@ with open("./FDAApproved.tsv", newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile, delimiter='\t', fieldnames=['drug','ids'])
     for row_val in reader:
         allowed_drug.append(row_val['drug'])
-
-
+        
 def entity_relations(allowed_labels, what_diseases):
     entity_name_to_id = {}
     entity_id_to_name = {}
