@@ -1,5 +1,6 @@
 import csv
-
+import sys
+sys.path.append("..")
 COVID = ['Disease::SARS-CoV2 E',
 'Disease::SARS-CoV2 M',
 'Disease::SARS-CoV2 N',

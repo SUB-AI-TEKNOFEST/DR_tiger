@@ -1,4 +1,6 @@
-import file_operations
+import sys
+sys.path.append("..")
+from operations import file_operations
 import torch
 import csv
 import torch.nn.functional as fn
@@ -8,8 +10,8 @@ allowed_labels = ['Hetionet::CtD::Compound:Disease','GNBR::T::Compound:Disease']
 
 diseases_list = file_operations.open_file_return_list('diseases_names.csv')
 allowed_drug = file_operations.allowed_drug
-entity_emb = np.load('data/embed/DRKG_TransE_l2_entity.npy')
-rel_emb = np.load('data/embed/DRKG_TransE_l2_relation.npy')
+entity_emb = np.load('./data/embed/DRKG_TransE_l2_entity.npy')
+rel_emb = np.load('./data/embed/DRKG_TransE_l2_relation.npy')
 
 
 def get_compound_list(diseases_list,allowed_labels=allowed_labels):

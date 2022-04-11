@@ -1,6 +1,8 @@
 import pyTigerGraph as tg
 import pandas as pd
-import file_operations
+import sys
+sys.path.append("..")
+from operations import file_operations
 
 secret="ji08rpup1652lum47ojvpuei1ievolum"
 host="https://offlabel.i.tgcloud.io"  

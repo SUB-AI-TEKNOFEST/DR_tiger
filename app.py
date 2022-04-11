@@ -1,8 +1,8 @@
 import numpy as np
 
 from flask import Flask, request, render_template
-from model_ml import get_compound_list
-from cloud_operations import topological_link_prediction
+from model.model_ml import get_compound_list
+from operations.cloud_operations import topological_link_prediction
 app = Flask(__name__)
 from visualize import html_saved
 import csv
