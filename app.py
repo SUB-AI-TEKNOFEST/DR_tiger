@@ -12,12 +12,12 @@ with open('diseases_names.csv', newline='') as f:
     data = list(reader)
 """ """
 import os
-if os.path.exists("templates/example.html"):
-  os.remove("templates/example.html")
-  print("Example deleted.")
+if os.path.exists("templates/visualization.html"):
+  os.remove("templates/visualization.html")
+  print("visualization deleted.")
 
 else:
-  print("Example does not exist.")
+  print("visualization does not exist.")
 
 @app.route('/')
 def index():
@@ -41,4 +41,4 @@ def predict():
 
 if __name__=='__main__':
   app.debug=True
-  app.run('0.0.0.0', port=5005)
+  app.run('0.0.0.0', port=5000)

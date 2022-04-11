@@ -62,7 +62,7 @@ def html_saved(disase_list,compound_list):
     G= nx.from_pandas_edgelist(df_saved,source='from_id',target='to_id')
     net.from_nx(G)
     net.show_buttons(filter_=['physics'])
-    net.show("templates/example.html")
+    net.show("templates/visualization.html")
 
 html_saved(disase_list,compound_list)
 

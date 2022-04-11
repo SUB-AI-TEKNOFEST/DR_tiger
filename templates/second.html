@@ -1,82 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- Site Metas -->
+   <title>Dr_Tiger</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="static/images/logo.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="static/images/logo.png">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="static/css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="static/style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="static/css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="static/css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="static/css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="static/css/custom.css">
+   <!-- Modernizer for Portfolio -->
+   <script src="static/js/modernizer.js"></script>
+   <!-- [if lt IE 9] -->
+   <style>  .btn {
+              background-color: #ddd;
+              border: none;
+              color: black;
+              padding: 16px 32px;
+              text-align: center;
+              font-size: 16px;
+              margin: 4px 15px;
+              transition: 0.3s;
+              cursor:pointer;
+              display:inline-block;
+            }
 
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial;
-  color: white;
-}
+            .btn:hover {
+              transform:scale(1.3);
+              background-color: #eb1269;
+              color: white;
+              display:inline-block;
+            }
 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.left {
-  left: 0;
-  background-color: #111;
-}
-
-.right {
-  right: 0;
-  background-color: red;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
+            #parent{
+              display: grid;
+              grid-template-columns: 50% 50%;
+            }
+            .col-1{
+              color: white;
+              height: 500px;
+              background-color: #112432;
+              padding: 10px;
+            }
+            .col-2{
+              color: white;
+              height: 500px;
+              background-color: #4d1635;
+              padding: 10px;
+            }
 
 
 
-</style>
-</head>
-<body>
-
-<div class="split left">
-  <div class="centered">
-
-
-<h2>Results From ML Model</h2>
-  {% for day in ml_model %}
-  <tr>
-    <td>{{day}}</td>  {# <- not working_days #}
-  </tr>
-{% endfor %}
+   </style>
+   </head>
+   <body class="clinic_version">
+      <!-- LOADER -->
+      <div id="preloader">
+         <img class="preloader" src="static/images/loaders/heart-loading2.gif" alt="">
+      </div>
+      <!-- END LOADER -->
+      <header>
+         <div class="header-top wow fadeIn">
+            <div class="container" style="width: 300px; height: 140px; overflow: hidden; display: inline-block;">
+               <a class="navbar-brand" ><img src="static/images/logo.png" alt="image"></a>
+               <div class="right-header">
+                  <div class="header-info">
 
 
 
 
-  </div>
-</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header-bottom wow fadeIn">
+                     <div class="container">
+                        <nav class="main-menu">
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                           </div>
 
-<div class="split right">
-  <div class="centered">
+                           <div id="navbar" class="navbar-collapse collapse">
+                              <ul class="nav navbar-nav">
+                                 <li><a>Home</a></li>
+                                 <li><a data-scroll href="#about">About us</a></li>
 
-    <h2>Results from topo</h2>
-    {% for day in topo %}
-  <tr>
-    <td>{{day}}</td>  {# <- not working_days #}
-  </tr>
-{% endfor %}
-     <button class="btn btn-success" onclick=" window.open('example.html')"> Visualize</button>
-  </div>
-</div>
 
-</body>
+                              </ul>
+                           </div>
+                        </nav>
+
+                     </div>
+                  </div>
+               </header>
+               <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('images/logo.png');">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                           <div class="text-contant">
+                              <h2>
+
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end row -->
+                  </div>
+                  <!-- end container -->
+                  <div id="parent">
+                          <div class="col-1">Column 1
+                          <h1>Results from ml</h1>
+                             {% for day in ml_model %}
+                                <tr>
+                                  <td>{{day}}</td>  {# <- not working_days #}
+                                   <a href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h1>title</h1></a>
+                                </tr>
+                             {% endfor %}
+                          </div>
+                          <div class="col-2">Column 2
+                          <h1>Results from topo</h1>
+                             {% for day in topo %}
+                                <tr>
+                                  <td>{{day}}</td>  {# <- not working_days #}
+                                </tr>
+                             {% endfor %}
+                          </div>
+                        </div>
+               </div>
+               <!-- end section -->
+
+      <div id="about" class="section wow fadeIn">
+         <div class="container">
+            <div class="heading">
+
+               <h2>About Us</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="message-box">
+                     <h4>WHO WE ARE</h4>
+
+                     <p> We are working on Bioinformatic projects as a team of 3 people from Computer Engineering. Working with big data was a waste of time in our projects. We solved this problem with TigerGraph. With our database containing more than 5 million data, we have prepared a project for the use of existing drugs on other diseases. We have developed the results to include results from various algorithms and drug codes so that both data scientists and people working in the medical industry can use them. </p>
+                     <a href="https://github.com/orgs/SUB-AI-TEKNOFEST/people" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Contact Us on GitHub</a>
+                     <a href="https://www.tigergraph.com/" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">TigerGraph</a>
+                  </div>
+                  <!-- end messagebox -->
+               </div>
+               <!-- end col -->
+               <div class="col-md-6">
+                  <div class="post-media wow fadeIn">
+                     <img src="static/images/we.png" alt="" class="img-responsive">
+                  </div>
+                  <!-- end media -->
+               </div>
+               <!-- end col -->
+            </div>
+            <!-- end row -->
+            <hr class="hr1">
+
+            <!-- end row -->
+         </div>
+         <!-- end container -->
+      </div>
+
+
+
+
+
+      <!-- end section -->
+
+      <footer id="footer" class="footer-area wow fadeIn">
+
+      </footer>
+      <div class="copyright-area wow fadeIn">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="footer-text">
+                     <p>© 2022 Dr_Tiger. Graph for All Million Dollar Challenge.</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="social">
+                     <ul class="social-links">
+                        <li><a href=""><i class="fa fa-rss"></i></a></li>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end copyrights -->
+      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <!-- all js files -->
+      <script src="static/js/all.js"></script>
+      <!-- all plugins -->
+      <script src="static/js/custom.js"></script>
+      <!-- map -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+   </body>
 </html>
