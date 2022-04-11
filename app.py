@@ -24,6 +24,12 @@ def index():
     return render_template(
         'index.html',
         colours =data)
+    
+@app.route('/templates/example.html')
+def example_html():
+    return render_template(
+        '/templates/example.html',
+        colours =data)
 
 
 @app.route("/predict", methods=['GET', 'POST'])
