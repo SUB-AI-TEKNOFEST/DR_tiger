@@ -130,7 +130,7 @@
                              {% for day in ml_model %}
                                 <tr>
                                   <td>{{day}}</td>  {# <- not working_days #}
-                                   <a href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h1>title</h1></a>
+                                   <a href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h1>DrugBank</h1></a>
                                 </tr>
                              {% endfor %}
                           </div>
@@ -139,6 +139,7 @@
                              {% for day in topo %}
                                 <tr>
                                   <td>{{day}}</td>  {# <- not working_days #}
+                                   <a href={{"https://go.drugbank.com/drugs/"+day[16:]}}><h1>DrugBank</h1></a>
                                 </tr>
                              {% endfor %}
                           </div>
