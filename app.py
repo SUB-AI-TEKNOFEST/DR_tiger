@@ -39,6 +39,7 @@ def predict():
     html_saved(disase_list= [selected_diseases[0][2:len(selected_diseases[0])-2]],compound_list=predicted_compounds)
     return render_template('second.html',ml_model = predicted_compounds,topo = topological_results)
 
+
 if __name__=='__main__':
   app.debug=True
   app.run('0.0.0.0', port=5000)
