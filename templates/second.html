@@ -49,6 +49,13 @@
               display:inline-block;
             }
    </style>
+   <title>The jQuery Example</title>
+
+    <h2>jQuery-AJAX in FLASK. Execute function on button click</h2>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript> $(function() { $("#mybutton").click(function (event) { $.getJSON('/SomeFunction', { },
+    function(data) { }); return false; }); }); </script>
    </head>
    <body class="clinic_version">
       <!-- LOADER -->
@@ -142,20 +149,11 @@
                   <div class="service-time one" style="background:#2895f1;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                      <h3>Here  visualize</h3>
-                        {% for day in ml_model %}
-                                <tr>
-                                   <div class="card">
-                                      <div class="card-body">
-                                        <td>
-                                           <h5 class="card-title">
-                                             {{day}} {# <- not working_days #}
-                                           </h5>
-                                        </td>
-                                        <a class="btn btn-primary"  href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h6>DrugBank</h6></a>
-                                      </div>
-                                   </div>
-                                </tr>
-                        {% endfor %}
+                        <form name="Manufacturer" action ='' method="post" >
+
+                              <br>
+                              <button type="submit" class="btn btn-success"> Predict </button>
+                              </form>
                   </div>
                </div>
             </div>
