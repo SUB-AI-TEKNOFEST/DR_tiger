@@ -132,18 +132,14 @@
                               <div >
                               <h3 style="padding-top:10px" >Select Disease</h3>
                               </div>
-                              <form action="{{url_for('predict')}}" method="post" style="background-color: #3399ff !important;color: #855aa5 !important; ">
-
-                                   <select class="form-select"  method="GET" action="/">
-                                       {% for colour in colours %}
-                                       <option value="{{colour}}" SELECTED>{{colour}}</option>"
-                                       {% endfor %}
-                                   </select>
-                                   <br><br>
-                                 <div class="d-flex justify-content-center">
-                                   <button type="submit" class="btn btn-success"> Predict </button>
-                                 </div>
-                               </form>
+                              <form name="Manufacturer" action ='' method="post" >
+                              <select name="manu">
+                              {% for manu in colours %}
+                                  <option value="{{ manu }}">{{ manu }}</option>
+                              {% endfor %}
+                               </select>
+                              <br>
+<button type="submit" class="btn btn-success"> Predict </button>                            </form>
                         </div>
 
                   </div>
