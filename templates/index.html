@@ -58,8 +58,12 @@
       <!-- END LOADER -->
       <header>
          <div class="header-top wow fadeIn">
-            <div class="container" style="width: 300px; height: 140px; overflow: hidden; display: inline-block;">
-               <a class="navbar-brand" ><img src="static/images/logo.png" alt="image"></a>
+            <div class="container" >
+               <div >
+
+
+               <a class="navbar-brand" ><img  src="static/images/logo.png"  height="110" class="img-fluid" alt="Responsive image"></a>
+                   </div>
                <div class="right-header">
                   <div class="header-info">
 
@@ -96,7 +100,7 @@
                <div class="col-md-12 col-sm-12">
                   <div class="text-contant">
                      <h2>
-                        <span class="center"><span class="icon"><img src="static/images/logo.png" alt="#" /></span></span>
+                        <span class="center"><span class="icon"><img src="static/images/drug.jpg" alt="#" /></span></span>
                         <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Dr_Tiger", "We Care Your Health", "We are DATA!" ]'>
                         <span class="wrap"></span>
                         </a>
@@ -123,22 +127,25 @@
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                <div class="row">
                   <div class="service-time middle" style="background:#0071d1;">
-                     <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 
-                     <h3>Select Disease</h3>
-                     <div >
-                        <form action="{{url_for('predict')}}" method="post" style="background-color: #3399ff !important;
-color: #855aa5 !important; ">
+                     <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                        <div class="form-group text-center">
+                              <div >
+                              <h3 style="padding-top:10px" >Select Disease</h3>
+                              </div>
+                              <form action="{{url_for('predict')}}" method="post" style="background-color: #3399ff !important;color: #855aa5 !important; ">
 
-                             <select name="colour" method="GET" action="/">
-                                 {% for colour in colours %}
-                                 <option value="{{colour}}" SELECTED>{{colour}}</option>"
-                                 {% endfor %}
-                             </select>
-                             <br><br>
-                             <button type="submit" class="pred-btn" class="btn"> Predict </button>
+                                   <select class="form-select"  method="GET" action="/">
+                                       {% for colour in colours %}
+                                       <option value="{{colour}}" SELECTED>{{colour}}</option>"
+                                       {% endfor %}
+                                   </select>
+                                   <br><br>
+                                 <div class="d-flex justify-content-center">
+                                   <button type="submit" class="btn btn-success"> Predict </button>
+                                 </div>
+                               </form>
+                        </div>
 
-                         </form>
-                     </div>
                   </div>
                </div>
             </div>
@@ -153,8 +160,8 @@ color: #855aa5 !important; ">
             </div>
          </div>
       </div>
-      <div id="about" class="section wow fadeIn">
-         <div class="container">
+      <div id="about" >
+         <div class="container" style="padding-top:150px;padding-bottom:100px" >
             <div class="heading">
 
                <h2>About Us</h2>

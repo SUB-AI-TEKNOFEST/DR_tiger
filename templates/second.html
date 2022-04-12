@@ -27,6 +27,8 @@
    <!-- Custom CSS -->
    <link rel="stylesheet" href="static/css/custom.css">
    <!-- Modernizer for Portfolio -->
+
+
    <script src="static/js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
    <style>  .btn {
@@ -125,16 +127,26 @@
                   </div>
                   <!-- end container -->
                   <div id="parent">
-                          <div class="col-1">Column 1
+                          <div class="col-6">Column 1
                           <h1>Results from ml</h1>
                              {% for day in ml_model %}
                                 <tr>
-                                  <td>{{day}}</td>  {# <- not working_days #}
-                                   <a href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h1>DrugBank</h1></a>
+                                   <div class="card">
+                                      <div class="card-body">
+                                        <td>
+                                           <h5 class="card-title">
+                                             {{day}} {# <- not working_days #}
+                                           </h5>
+                                        </td>
+                                        <a class="btn btn-primary" href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h1>DrugBank</h1></a>
+                                      </div>
+                                 </div>
+
+
                                 </tr>
                              {% endfor %}
                           </div>
-                          <div class="col-2">Column 2
+                          <div class="col-6">Column 2
                           <h1>Results from topo</h1>
                              {% for day in topo %}
                                 <tr>
