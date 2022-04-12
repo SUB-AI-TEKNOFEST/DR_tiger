@@ -90,12 +90,7 @@
 
                   <div id="navbar" class="navbar-collapse collapse">
                      <ul class="nav navbar-nav">
-                        <li><a >
-                           <form name="Manufacturer" action ='/' method="get" >
-                              <br>
-                              <button type="submit" class="btn btn-success"> Home </button>
-                              </form>
-                        </a></li>
+                        <li><a data-scroll>Home</a></li>
                         <li><a data-scroll href="#about">About us</a></li>
 
 
@@ -113,7 +108,6 @@
                   <div class="text-contant">
                      <h2>
                         <span class="center"><span class="icon"><img src="static/images/drug.jpg" alt="#" /></span></span>
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Predictions for the disease", "Left side from Vector ML Model", "Right side from Topological Link Prediction" ]'>
                         <span class="wrap"></span>
                         </a>
                      </h2>
@@ -128,8 +122,8 @@
       <div id="time-table" class="time-table-section">
          <div class="container">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-               <div class="row">
-                  <div class="service-time one" style="background:#2895f1;">
+               <div class="row"  style="display: flex;">
+                  <div class="service-time one" style="background:#2895f1;  height:750px;  width:450px; max-width:450px; display: inline-block;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                      <h3>Predicted Drugs from Our Machine Learning Model</h3>
                         {% for day in ml_model %}
@@ -151,32 +145,37 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                <div class="row">
-                  <div class="service-time one" style="background:#2895f1;">
+                  <div class="service-time one" style="background:#2895f1; height:750px; width:450px; max-width:450px; display: inline-block;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
-                     <h3>Here  visualize</h3>
-                        <form name="Manufacturer" action ='/visualize' method="post" >
+                     <h3>Visualize The Data</h3>
+                        <form name="Manufacturer" action ='/visualize' method="post" style="padding-left: 75px;">
 
                               <br>
-                              <button type="submit" class="btn btn-success"> Predict </button>
+                              <button type="submit" class="btn btn-success" style=""> Visualize </button>
+                              </form>
+                     <h3>New  Prediction</h3>
+                        <form name="Manufacturer" action ='/' method="get"  style="padding-left: 75px; " >
+                              <br>
+                              <button type="submit" class="btn btn-primary" style="padding-bottom: 10px;"> Home </button>
                               </form>
                   </div>
                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                <div class="row">
-                  <div class="service-time one" style="background:#2895f1;">
+                  <div class="service-time one" style="background:#2895f1; height:750px; width:450px; max-width:450px; display: inline-block;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
-                     <h3>Here topo results</h3>
-                        {% for day in topo %}
+                     <h3>Topological Results Between Disease and Predicted Results</h3>
+                        {% for day,hey in topo.items() %}
                                 <tr>
                                    <div class="card">
-                                      <div class="card-body">
+                                      <div class="card-body" style="margin-top:60px;">
                                         <td>
                                            <h5 class="card-title">
                                              {{day}} {# <- not working_days #}
+                                              {{hey}} {# <- not working_days #}
                                            </h5>
                                         </td>
-                                        <a class="btn btn-primary"  href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h6>DrugBank</h6></a>
                                       </div>
                                    </div>
                                 </tr>
