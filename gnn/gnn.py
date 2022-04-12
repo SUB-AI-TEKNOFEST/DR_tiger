@@ -14,15 +14,8 @@ class DRKG(data.KnowledgeGraphDataset):
         verbose (int, optional): output verbose level
     """
 
-    # url = "https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz"	
-    # md5 = "40519020c906ffa9c821fa53cd294a76"	
     def __init__(self, path, verbose = 1):
-        # path = os.path.expanduser(path)
-        # if not os.path.exists(path):
-        #     os.makedirs(path)
-        # self.path = path	
-        # zip_file = utils.download(self.url, path, md5 = self.md5)
-        # tsv_file = utils.extract(zip_file, "drkg.tsv")	
+
         self.load_tsv('drkg.tsv', verbose = verbose)
 
 
@@ -45,4 +38,3 @@ optimizer = torch.optim.Adam(task.parameters(), lr = 2e-5)
 solver = core.Engine(task, train_set, valid_set, test_set, optimizer,
                       batch_size = 1024)
 solver.train(num_epoch = 5)
-__import__('ipdb').set_trace()
