@@ -34,6 +34,7 @@ disase_list = ['Disease::SARS-CoV2 nsp5']
 
 def topological_link_prediction(disase_list,compound_list):
     cleanead_disase_list = []
+    compound_list_cleanead = []
     for d in disase_list:
         d=d.split('::')[1]
         try:
@@ -42,9 +43,16 @@ def topological_link_prediction(disase_list,compound_list):
             print(f'The {d} not in cloud yet')
         else:
             cleanead_disase_list.append(d)
-
-    compound_list_cleanead = [item.split('::')[1] for item in compound_list.keys()]
-    
+            
+    for c in compound_list:
+        c=c.split('::')[1]
+        try:
+            conn.getVerticesById(vertexType='Compound',vertexIds=c)
+        except:
+            print(f'The {c} not in cloud yet')
+        else:
+            compound_list_cleanead.append(c)
+            
     link_prediction_scores = {}
     for d in cleanead_disase_list:
         for c in compound_list_cleanead:
