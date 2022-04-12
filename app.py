@@ -51,8 +51,6 @@ def predict():
 
 @app.route('/visualize', methods =["GET", "POST"])
 def visualize():
-    if request.method == 'GET':
-        return render_template('visualization.html')
     return render_template('visualization.html')
 
 
