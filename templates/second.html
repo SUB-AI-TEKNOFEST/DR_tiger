@@ -135,7 +135,7 @@
                                              {{day}} {# <- not working_days #}
                                            </h5>
                                         </td>
-                                        <a class="btn btn-primary"  href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h6>DrugBank</h6></a>
+                                        <a class="btn btn-primary"  href={{"https://go.drugbank.com/drugs/"+day[10:]}}><h6>Click To Go Drug bank</h6></a>
                                       </div>
                                    </div>
                                 </tr>
@@ -153,7 +153,7 @@
                               <br>
                               <button type="submit" class="btn btn-success" style=""> Visualize </button>
                               </form>
-                     <h3>New  Prediction</h3>
+                     <h3>Home</h3>
                         <form name="Manufacturer" action ='/' method="get"  style="padding-left: 75px; " >
                               <br>
                               <button type="submit" class="btn btn-primary" style="padding-bottom: 10px;"> Home </button>
@@ -166,14 +166,13 @@
                   <div class="service-time one" style="background:#2895f1; height:750px; width:450px; max-width:450px; display: inline-block;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                      <h3>Topological Results Between Disease and Predicted Results</h3>
-                        {% for day,hey in topo.items() %}
+                        {% for item in topo%}
                                 <tr>
                                    <div class="card">
-                                      <div class="card-body" style="margin-top:60px;">
+                                      <div class="card-body" style="margin-top:0px;">
                                         <td>
                                            <h5 class="card-title">
-                                             {{day}} {# <- not working_days #}
-                                              {{hey}} {# <- not working_days #}
+                                             {{item}} {# <- not working_days #}
                                            </h5>
                                         </td>
                                       </div>
