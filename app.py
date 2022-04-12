@@ -34,16 +34,15 @@ def predict():
     #predicted_compounds = get_compound_list(diseases_list = [selected_diseases[0][2:len(selected_diseases[0])-2]])
     #topological_results = topological_link_prediction(disase_list = [selected_diseases[0][2:len(selected_diseases[0])-2]],compound_list=predicted_compounds)
     predicted_compounds = {'Compound::DB00745': -0.00038662006, 'Compound::DB01255': -0.0004425164, 'Compound::DB01041': -0.0005766802,
-     'Compound::DB01224': -0.0006786369, 'Compound::DB00993': -0.00071947876, 'Compound::DB00997': -0.0007438894,
-     'Compound::DB00472': -0.00076105114, 'Compound::DB00822': -0.0007617865, 'Compound::DB00850': -0.000788502,
-     'Compound::DB00768': -0.0007890885}
-    topological_results =  {'Compound::DB00745': -0.00038662006, 'Compound::DB01255': -0.0004425164, 'Compound::DB01041': -0.0005766802, 'Compound::DB01224': -0.0006786369, 'Compound::DB00993': -0.00071947876, 'Compound::DB00997': -0.0007438894, 'Compound::DB00472': -0.00076105114, 'Compound::DB00822': -0.0007617865, 'Compound::DB00850': -0.000788502, 'Compound::DB00768': -0.0007890885}
+     'Compound::DB01224': -0.0006786369, 'Compound::DB00993': -0.00071947876}
+    topological_results =  {'Compound::DB00745': -0.00038662006, 'Compound::DB01255': -0.0004425164, 'Compound::DB01041': -0.0005766802, 'Compound::DB01224': -0.0006786369, 'Compound::DB00993': -0.00071947876}
 
     print(f"ml model {predicted_compounds}")
     print(f" topological {topological_results}")
     print(f" len is {len(topological_results)}")
     #html_saved(disase_list= [selected_diseases[0][2:len(selected_diseases[0])-2]],compound_list=predicted_compounds)
-    return render_template('second.html',ml_model = predicted_compounds,topo = topological_results)
+    return render_template('second.html',ml_model = predicted_compounds,topo = topological_results,selected = selected_diseases)
+
 
 
 if __name__=='__main__':
