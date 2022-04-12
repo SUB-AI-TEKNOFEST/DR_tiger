@@ -50,7 +50,7 @@ def predict():
     return render_template('second.html',ml_model = predicted_compounds,topo = topological_results,selected = selected_diseases)
 
 
-@app.route('/', methods =["GET", "POST"])
+@app.route('/visualize', methods =["GET", "POST"])
 def visualize():
     if request.method == 'GET':
         return render_template('visualization.html')
