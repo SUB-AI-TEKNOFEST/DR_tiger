@@ -26,10 +26,9 @@ def index():
         colours =data)
 
 
-@app.route('/', methods =["GET", "POST"])
+@app.route('/predict', methods =["GET", "POST"])
 def predict():
-    if request.method == 'POST':
-        selected_diseases = request.form['manu']
+    selected_diseases = request.form['manu']
 
     print(f"selected : {selected_diseases}")
 
