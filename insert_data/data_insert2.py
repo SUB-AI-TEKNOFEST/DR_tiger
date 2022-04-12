@@ -1,6 +1,7 @@
 import pyTigerGraph as tg
 import pandas as pd
-
+import sys
+sys.path.append("..")
 secret="ji08rpup1652lum47ojvpuei1ievolum"
 host="https://offlabel.i.tgcloud.io"  
 graphname="DRKG"
@@ -13,7 +14,7 @@ authToken = authToken[0]
 
 conn=tg.TigerGraphConnection(host=host,graphname=graphname,username=username,password=password,apiToken=authToken)
 
-drkg_file = '../data/drkg.tsv'
+drkg_file = './data/drkg.tsv'
 df = pd.read_csv(drkg_file, sep="\t")
 triplets = df.values.tolist()
 print(len(triplets))
@@ -60,7 +61,7 @@ for triplet in triplets:
 # print(conn.gsql(f"""use global {schema}"""))
 
 conn.getSchema()
-for i in range(5090948,0,-1):
+for i in range(5004349,0,-1):
     [h,r,t] = triplets[i]
     h_type = h.split("::")[0].replace(" " ,"")
     h_id = str(h.split("::")[1])
