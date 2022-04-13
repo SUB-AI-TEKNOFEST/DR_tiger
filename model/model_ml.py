@@ -46,7 +46,7 @@ def get_compound_list(diseases_list,allowed_labels=allowed_labels):
     proposed_dids = drug_ids[topk_indices]
     proposed_scores = scores[topk_indices]
     dict={}
-    for i in range(5):
+    for i in range(4):
         drug = int(proposed_dids[i])
         score = proposed_scores[i]
         dict[entity_id_to_name[drug]]= score

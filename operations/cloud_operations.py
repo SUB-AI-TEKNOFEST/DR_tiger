@@ -54,8 +54,8 @@ def topological_link_prediction(disase_list,compound_list):
             compound_list_cleanead.append(c)
             
     link_prediction_scores = {}
-    for d in cleanead_disase_list:
-        for c in compound_list_cleanead:
+    for d in cleanead_disase_list[:4]:
+        for c in compound_list_cleanead[:4]:
             tg_adamic_adar=conn.runInstalledQuery("tg_adamic_adar", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
             tg_common_neighbors=conn.runInstalledQuery("tg_common_neighbors", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
             tg_preferential_attachment=conn.runInstalledQuery("tg_preferential_attachment", {'a':f'{c}','a.type':'Compound','b':f'{d}','b.type':'Disease','e_type':'ALL','print_res':True})
