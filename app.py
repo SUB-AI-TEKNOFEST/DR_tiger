@@ -28,12 +28,9 @@ def predict():
     selected_diseases = request.form['manu']
     print(f"selected : {selected_diseases}")
     print(f"given disease  : {[selected_diseases[2:len(selected_diseases)-2]]}")
-    # predicted_compounds = get_compound_list(diseases_list=[selected_diseases[2:len(selected_diseases)-2]])
-    # topological_results = topological_link_prediction( disase_list=[selected_diseases[2:len(selected_diseases)-2]], compound_list=predicted_compounds)
+    predicted_compounds = get_compound_list(diseases_list=[selected_diseases[2:len(selected_diseases)-2]])
+    topological_results = topological_link_prediction( disase_list=[selected_diseases[2:len(selected_diseases)-2]], compound_list=predicted_compounds)
 
-    predicted_compounds = {'Compound::DB14128': -0.0050533684, 'Compound::DB09341': -0.0051014163, 'Compound::DB00815': -0.005489906, 'Compound::DB12028': -0.005498439}
-
-    topological_results = {'SARS-CoV2 E::DB14128': {'tg_adamic_adar': 0, 'tg_common_neighbors': 0, 'tg_preferential_attachment': 0, 'tg_total_neighbors': 6, 'tg_resource_allocation': 0}, 'SARS-CoV2 E::DB09341': {'tg_adamic_adar': 0, 'tg_common_neighbors': 0, 'tg_preferential_attachment': 0, 'tg_total_neighbors': 6, 'tg_resource_allocation': 0}, 'SARS-CoV2 E::DB00815': {'tg_adamic_adar': 0, 'tg_common_neighbors': 0, 'tg_preferential_attachment': 24, 'tg_total_neighbors': 10, 'tg_resource_allocation': 0}, 'SARS-CoV2 E::DB12028': {'tg_adamic_adar': 0, 'tg_common_neighbors': 0, 'tg_preferential_attachment': 0, 'tg_total_neighbors': 6, 'tg_resource_allocation': 0}}
 
     topological_result_array_form = []
     for key,value in topological_results.items():
