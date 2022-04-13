@@ -42,17 +42,17 @@ State any dependencies and their versions needed to be installed to test this pr
 
 Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
-git clone https://github.com/SUB-AI-TEKNOFEST/DR_tiger.git
+  git clone https://github.com/SUB-AI-TEKNOFEST/DR_tiger.git
 2. Install dependencies
-python3 -m venv venv
+  python3 -m venv venv
 
-pip3 install -r requirements.txt
+  pip3 install -r requirements.txt
 
 3. Access data
-python3 untar.py
+  python3 untar.py
 
 4. Steps to build/run project
-python3 app.py
+  python3 app.py
 
 ## Known Issues and Future Improvements
 
