@@ -45,6 +45,7 @@ Please give detailed instructions on installing, configuring, and running the pr
 git clone https://github.com/SUB-AI-TEKNOFEST/DR_tiger.git
 2. Install dependencies
 python3 -m venv venv
+
 pip3 install -r requirements.txt
 
 3. Access data
