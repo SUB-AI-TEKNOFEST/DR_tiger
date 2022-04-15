@@ -8,4 +8,4 @@ flask
 matplotlib
 networkx
 pyvis
-torchdrug
+torchdrug==0.1.2.post1
