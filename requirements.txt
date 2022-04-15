@@ -1,12 +1,12 @@
 pyTigerGraph
 pandas
 numpy
-torch-scatter==1.8.0
-torch==1.8.0
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.1+cpu
 fastapi
 uvicorn[standart] ==0.2.2
 flask
 matplotlib
 networkx
 pyvis
-torchdrug==0.1.2.post1
+torchdrug
