@@ -35,7 +35,11 @@ Our project is the most Applicable graph solution
 
 - **Technology Stack**: Describe technologies and programming languages used. 
 - **Visuals**: Feel free to include other images or videos to better demonstrate your work.
-- Link websites or applications if needed to demonstrate your work. 
+-  https://www.youtube.com/watch?v=RPOCxoL1GgU
+<img width="1453" alt="Ekran Resmi 2022-04-14 00 38 19" src="https://user-images.githubusercontent.com/58150504/163575905-e22c2087-2dfe-40f0-860d-61ce1aa61e9e.png">
+![Ekran Resmi 2022-04-14 00 41 19](https://user-images.githubusercontent.com/58150504/163575916-51990326-055e-4621-9a22-8952c5e839e9.png)
+
+![Ekran Resmi 2022-04-14 00 41 26](https://user-images.githubusercontent.com/58150504/163575952-970e947b-4933-4f16-a17a-f4b76a2709fd.png)
 
 ## Dependencies
 
@@ -45,7 +49,8 @@ State any dependencies and their versions needed to be installed to test this pr
 
 Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
-  git clone https://github.com/SUB-AI-TEKNOFEST/DR_tiger.git
+  git clone https://githu![Uploading Ekran Resmi 2022-04-14 00.41.26.png…]()
+b.com/SUB-AI-TEKNOFEST/DR_tiger.git
 2. Install dependencies
   python3 -m venv venv
 
