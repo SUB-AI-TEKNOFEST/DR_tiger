@@ -3,7 +3,7 @@ pandas
 numpy
 -f https://download.pytorch.org/whl/torch_stable.html
 torch==1.8.1+cpu
-torch-scatter==2.0.9
+torch-scatter==1.1.1
 fastapi
 uvicorn[standart] ==0.2.2
 flask
