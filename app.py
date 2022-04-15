@@ -30,15 +30,11 @@ def predict():
     print(f"given disease  : {[selected_diseases[2:len(selected_diseases)-2]]}")
     predicted_compounds = get_compound_list(diseases_list=[selected_diseases[2:len(selected_diseases)-2]])
     topological_results = topological_link_prediction( disase_list=[selected_diseases[2:len(selected_diseases)-2]], compound_list=predicted_compounds)
-
-
-    topological_result_array_form = []
+    topological_result_array_form = {}
+    
     for key,value in topological_results.items():
-        value_str = str(value).replace('{','').replace('}','').split(',')
-        key_str =str(key)
-        topological_result_array_form.append(key_str)
-        for v in value_str:
-            topological_result_array_form.append(v)
+        value = str(value).replace('{','').replace('}','')
+        topological_result_array_form[key]= value
     print(f"ml model {predicted_compounds}")
     print(f" topological {topological_results}")
     print(f" len is {len(topological_results)}")
