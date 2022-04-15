@@ -1,12 +1,9 @@
-ez_setup
-unroll
-
 pyTigerGraph
 pandas
 numpy
 torch==1.9.0
 fastapi
-uvicorn[standard]
+uvicorn>=0.2.2
 flask
 matplotlib
 networkx
