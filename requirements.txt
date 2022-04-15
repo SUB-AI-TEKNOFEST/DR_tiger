@@ -1,3 +1,6 @@
+ez_setup
+unroll
+
 pyTigerGraph
 pandas
 numpy
