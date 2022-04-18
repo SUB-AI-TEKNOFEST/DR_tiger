@@ -35,7 +35,7 @@ Our project is the most Applicable graph solution
 
 - **Technology Stack**: Describe technologies and programming languages used. 
 - **Visuals**: Feel free to include other images or videos to better demonstrate your work.
--  https://www.youtube.com/watch?v=RPOCxoL1GgU
+-  https://www.youtube.com/watch?v=5r-vlL_daG4
 <img width="1453" alt="Ekran Resmi 2022-04-14 00 38 19" src="https://user-images.githubusercontent.com/58150504/163575905-e22c2087-2dfe-40f0-860d-61ce1aa61e9e.png">
 ![Ekran Resmi 2022-04-14 00 41 19](https://user-images.githubusercontent.com/58150504/163575916-51990326-055e-4621-9a22-8952c5e839e9.png)
 
@@ -60,7 +60,7 @@ b.com/SUB-AI-TEKNOFEST/DR_tiger.git
   python3 untar.py
 
 4. Steps to build/run project
-  python3 app.py
+  flask run/python3 app.py
 
 ## Known Issues and Future Improvements
 
