@@ -66,6 +66,7 @@ Please give detailed instructions on installing, configuring, and running the pr
   git clone ...
 2. Install dependencies
   python3 -m venv venv
+  . venv/bin/activate
   pip3 install -r requirements.txt
 3. Access data
   python3 untar.py
