@@ -73,8 +73,8 @@ Please give detailed instructions on installing, configuring, and running the pr
   flask run/python3 app.py or python3 app.py
 
 ## Known Issues and Future Improvements
-
-* Dataset
+* More data can be added to increase accuracy.
+* The total project size can be reduced.
 
 ## Reflections
 
