@@ -57,24 +57,20 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 ![Ekran Resmi 2022-04-14 00 41 26](https://user-images.githubusercontent.com/58150504/163575952-970e947b-4933-4f16-a17a-f4b76a2709fd.png)
 
 ## Dependencies
-  Installation part steps has to be followed.
+  Installation part steps have to be followed.
 
 ## Installation
 
 Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
-  git clone https://githu![Uploading Ekran Resmi 2022-04-14 00.41.26.png…]()
-b.com/SUB-AI-TEKNOFEST/DR_tiger.git
+  git clone ...
 2. Install dependencies
   python3 -m venv venv
-
   pip3 install -r requirements.txt
-
 3. Access data
   python3 untar.py
-
 4. Steps to build/run project
-  flask run/python3 app.py
+  flask run/python3 app.py or python3 app.py
 
 ## Known Issues and Future Improvements
 
