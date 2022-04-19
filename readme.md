@@ -63,7 +63,7 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 
 Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
-  * git clone ...
+  * git clone git@github.com:SUB-AI-TEKNOFEST/DR_tiger.git
 2. Install dependencies
   * python3 -m venv venv
   * . venv/bin/activate
