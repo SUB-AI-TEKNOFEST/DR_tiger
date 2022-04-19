@@ -63,11 +63,11 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 
 Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
-  git clone ...
+  * git clone ...
 2. Install dependencies
-  python3 -m venv venv
-  . venv/bin/activate
-  pip3 install -r requirements.txt
+  * python3 -m venv venv
+  * . venv/bin/activate
+  * pip3 install -r requirements.txt
 3. Access data
   python3 untar.py
 4. Run data_insert script to add data to the cloud or local (Change secret, host, graphname, username and password in the script).
