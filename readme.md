@@ -69,7 +69,9 @@ Please give detailed instructions on installing, configuring, and running the pr
   pip3 install -r requirements.txt
 3. Access data
   python3 untar.py
-4. Steps to build/run project
+4. Run data_insert script to add data to the cloud or local (Change secret, host, graphname, username and password in the script).
+  python3 -m insert_data.data_insert
+6. Steps to build/run project (Change secret, host, graphname, username and password in the script).
   flask run/python3 app.py or python3 app.py
 
 ## Known Issues and Future Improvements
