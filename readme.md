@@ -77,9 +77,10 @@ Please give detailed instructions on installing, configuring, and running the pr
 * The total project size can be reduced.
 
 ## Reflections
-
-Review the steps you took to create this project and the resources you were provided. Feel free to indiciate room for improvement and general reflections.
-
+* tgcloud account was created.
+* DRKG data loaded into the cloud database.
+* model script was created.
+* platform was created.
 ## References
 Dataset: https://github.com/gnn4dr/DRKG
 General TigerGraph and ML Knowledge https://medium.com/@karimsaraipour/gcn-with-tigergraph-and-pyg-a4ebff437d8a
