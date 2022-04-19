@@ -81,6 +81,5 @@ Please give detailed instructions on installing, configuring, and running the pr
 Review the steps you took to create this project and the resources you were provided. Feel free to indiciate room for improvement and general reflections.
 
 ## References
-
-Please give credit to other projects, videos, talks, people, and other sources that have inspired and influenced your project. 
-
+Dataset: https://github.com/gnn4dr/DRKG
+General TigerGraph and ML Knowledge https://medium.com/@karimsaraipour/gcn-with-tigergraph-and-pyg-a4ebff437d8a
