@@ -74,7 +74,7 @@ Please give detailed instructions on installing, configuring, and running the pr
 
 ## Known Issues and Future Improvements
 
-Explain known liminations within the project and potential next steps. 
+* Dataset
 
 ## Reflections
 
