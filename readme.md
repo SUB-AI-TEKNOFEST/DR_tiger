@@ -61,7 +61,6 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 
 ## Installation
 
-Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
 1. Clone repository
   * git clone git@github.com:SUB-AI-TEKNOFEST/DR_tiger.git
 2. Install dependencies
@@ -72,8 +71,8 @@ Please give detailed instructions on installing, configuring, and running the pr
   python3 untar.py
 4. Run data_insert script to add data to the cloud or local (Change secret, host, graphname, username and password in the script).
   python3 -m insert_data.data_insert
-6. Steps to build/run project (Change secret, host, graphname, username and password in the script).
-  flask run/python3 app.py or python3 app.py
+## Steps to build/run project (Change secret, host, graphname, username and password in the script to use your own cloud account).
+  flask run or python3 app.py
 
 ## Known Issues and Future Improvements
 * More data can be added to increase accuracy.
