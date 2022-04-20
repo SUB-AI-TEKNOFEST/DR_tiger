@@ -55,6 +55,8 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 ![Ekran Resmi 2022-04-14 00 41 19](https://user-images.githubusercontent.com/58150504/163575916-51990326-055e-4621-9a22-8952c5e839e9.png)
 
 ![Ekran Resmi 2022-04-14 00 41 26](https://user-images.githubusercontent.com/58150504/163575952-970e947b-4933-4f16-a17a-f4b76a2709fd.png)
+![Ekran Resmi 2022-04-20 12 41 28](https://user-images.githubusercontent.com/58150504/164199961-f9be9a7d-cfaf-44dc-9a7f-1d3e0a650fe5.png)
+
 
 ## Dependencies
   Installation part steps have to be followed.
