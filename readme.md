@@ -70,9 +70,9 @@ The total trade volume of the pharmaceutical industry in the world was over US$ 
 3. Access data
   python3 untar.py
 4. Run data_insert script to add data to the cloud or local (Change secret, host, graphname, username and password in the script).
-  python3 -m insert_data.data_insert
-## Steps to build/run project (Change secret, host, graphname, username and password in the script to use your own cloud account).
-  flask run or python3 app.py
+ * python3 -m insert_data.data_insert
+5. Steps to build/run project (Change secret, host, graphname, username and password in the script to use your own cloud account).
+ * flask run or python3 app.py
 
 ## Known Issues and Future Improvements
 * More data can be added to increase accuracy.
